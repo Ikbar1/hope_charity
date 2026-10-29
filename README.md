@@ -4,6 +4,10 @@ Fondasi Laravel 13 untuk website publik multilingual Yayasan Hope Charity Indone
 
 ## Konsep review
 
+Preview publik sementara: https://ikbar1.github.io/hope_charity/ (GitHub Pages).
+Panduan ekspor/update: `docs/github-pages-preview.md`. Branch `gh-pages` hanya
+memuat HTML/aset; source Laravel tetap dikembangkan di `development`.
+
 Website mengikuti mockup pada empat halaman ID/EN/AR. Materi ilustratif
 berstatus konsep hanya tersedia pada local/testing/preview. Donasi dihapus.
 Deployment Rumahweb mengikuti change release setelah review lokal.
