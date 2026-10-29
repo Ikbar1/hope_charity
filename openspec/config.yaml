@@ -1,0 +1,105 @@
+schema: spec-driven
+
+context: |
+  Proyek ini membangun website baru Yayasan Hope Charity Indonesia. Proyek ini
+  bukan pengganti situs produksi lama dan pada awal pekerjaan hanya mempunyai
+  mockup HTML/CSS/JavaScript, logo resmi, serta delapan kategori program yang
+  telah diverifikasi pengguna.
+
+  Repository, database, akun, media, konfigurasi, dan deployment harus terpisah
+  dari web_yayasan serta web_sekolah. Kedua proyek tersebut hanya boleh menjadi
+  referensi pola teknis dan workflow; jangan menyalin identitas, data, secret,
+  konten, akun, atau konfigurasi produksinya.
+
+  Target teknis adalah modular monolith Laravel 13, PHP >=8.4.27 dan <9.0,
+  Blade, CSS custom, JavaScript seperlunya, serta MySQL/MariaDB ketika database
+  mulai dibutuhkan. composer.json SHALL memakai constraint PHP ^8.4.27. Jangan
+  menurunkan constraint ke PHP 8.3 hanya karena masih didukung Laravel. Bila
+  hosting tidak menyediakan PHP 8.4.27 atau lebih baru, deployment terblokir
+  sampai runtime diperbarui atau keputusan teknis ditinjau ulang. PHP 8.6
+  prerelease/RC tidak boleh dipakai pada local, testing, staging, atau produksi.
+
+  Baseline PHP tersebut menanggapi CVE-2026-109618 dan CVE-2026-109619. Untuk
+  Windows gunakan build PHP 8.4.27-1 atau lebih baru agar dependency Brotli juga
+  membawa perbaikan CVE-2026-111497. Untuk Linux/cPanel, paket vendor harus
+  dibuktikan membawa patch PHP dan dependency keamanan yang relevan. Konfigurasi
+  server SHALL menetapkan session.upload_progress.enabled=0 sebelum request
+  diproses sampai perbaikan CVE-2026-115560 telah dirilis dan diverifikasi.
+  Jangan mengandalkan ini_set() dari aplikasi untuk kontrol tersebut.
+
+  Fase pertama adalah website statis berbasis Laravel tanpa CMS dan tanpa
+  database konten, dengan halaman Beranda, Profil, Program, dan Kontak. Renderer
+  publik harus dipisahkan dari sumber konten melalui kontrak repository agar
+  CMS dapat ditambahkan tanpa membongkar halaman. CMS masa depan hanya mengelola
+  posting program, media, terjemahan, draft/published, dan riwayat terkait.
+  Layout, navigasi, profil, kontak, dan desain tetap dimiliki kode.
+
+  Website mendukung Bahasa Indonesia, Inggris, dan Arab. Bahasa Arab membutuhkan
+  presentasi RTL yang benar. Konten yang belum tersedia atau belum diverifikasi
+  tidak boleh fallback diam-diam ke bahasa lain. Delapan kategori program beserta
+  urutan dan terjemahan yang diberikan pengguna merupakan sumber terverifikasi;
+  deskripsi, media, kegiatan, capaian, lokasi, kontak, legalitas, donatur, dan
+  profil kelembagaan lainnya belum terverifikasi sampai ada sumber yang disahkan.
+
+  Gunakan skill frontend-design ketika membuat frontend baru atau mengubah UI
+  secara material. Mockup dan logo Hope Charity adalah acuan identitas visual;
+  jangan menyalin desain publik web_yayasan atau web_sekolah. Tetapkan palet,
+  tipografi Latin-Arab, skala tipe, layout, alignment LTR/RTL, aksesibilitas, dan
+  review screenshot desktop/mobile untuk setiap arah bahasa yang terdampak.
+
+  Jangan mengarang legalitas, profil, pengurus, lokasi, kontak, angka donasi,
+  capaian, laporan, testimoni, hadis, terjemahan, atau status program. Konten
+  ilustratif dalam mockup tidak boleh diperlakukan sebagai fakta yayasan atau
+  dipublikasikan tanpa verifikasi.
+
+  Local dan preview wajib noindex. Hosting, domain, deployment, indexing
+  produksi, formulir aktif, email, WhatsApp, dan integrasi eksternal belum
+  diotorisasi. Kompatibilitas hosting harus dibuktikan dari runtime CLI dan web
+  SAPI sebenarnya; pilihan versi pada panel hosting saja bukan bukti.
+
+  Dokumentasi dan penjelasan proyek menggunakan Bahasa Indonesia. Marker
+  requirement SHALL/MUST dan Scenario OpenSpec mengikuti format validator.
+  Selesaikan verifikasi dan keputusan material dalam explore sebelum propose.
+  Bedakan fakta teramati, keputusan pengguna, asumsi sementara, dan usulan
+  teknis. Jangan meminta ulang keputusan yang sudah dicatat kecuali ada bukti
+  baru, dan jangan menyebut fitur selesai bila baru berupa dokumen atau scaffold.
+
+  Pisahkan perubahan OpenSpec menjadi onboarding/fondasi, frontend multilingual
+  statis, CMS posting program, dan release/deployment. Jangan menggabungkan
+  seluruh pembangunan, CMS, dan produksi dalam satu perubahan besar.
+
+rules:
+  proposal:
+    - Nyatakan tujuan, capability, non-goals, sumber, dampak, baseline keamanan, serta gate fase berikutnya.
+    - Bedakan fakta yang diamati, keputusan pengguna, asumsi sementara, dan usulan teknis.
+    - Pecah onboarding/fondasi, frontend multilingual, CMS, dan release menurut hasil yang dapat diverifikasi.
+  specs:
+    - Setiap requirement wajib memiliki Scenario yang dapat diuji.
+    - Gunakan capability yang kohesif; jangan menjadikan seluruh website dan CMS satu capability.
+    - Tentukan perilaku runtime PHP tidak aman, RTL, locale tanpa konten, media hilang, no-JS, aksesibilitas, dan kegagalan relevan selain happy path.
+  design:
+    - Jelaskan batas modul, kontrak sumber konten, routing locale, SEO/noindex, model CMS masa depan, keamanan PHP, validasi environment, aksesibilitas, dependensi, dan rollback.
+    - Jelaskan cara mengganti repository statis dengan sumber database tanpa mengubah kontrak renderer publik.
+    - Jangan mengklaim kompatibilitas hosting atau keamanan runtime tanpa pengukuran dan bukti versi paket.
+  tasks:
+    - Urutkan task menurut dependensi dan hasil yang dapat dilihat atau diverifikasi.
+    - Kelompokkan pekerjaan frontend menurut halaman atau hasil pengguna, bukan simulasi handoff per peran.
+    - Checkbox hanya dicentang setelah implementasi dan pemeriksaan task benar-benar selesai.
+    - Setelah task selesai tambahkan catatan Selesai bertanggal, perubahan, bukti verifikasi, dan keterbatasan tanpa mencantumkan secret.
+
+operations:
+  apply:
+    guidance:
+      - Jalankan pekerjaan hanya dalam web_yayasan2; jangan mengubah web_yayasan, web_sekolah, hosting, atau data produksi sebagai efek samping.
+      - Gunakan data, akun, email, media, database, dan storage lokal untuk testing; jangan menggunakan credential atau secret produksi.
+      - Preflight wajib menolak PHP di bawah 8.4.27, PHP prerelease, ekstensi wajib yang hilang, atau session.upload_progress.enabled yang masih aktif.
+      - Preflight mencatat PHP_VERSION, SAPI, sumber paket/vendor, daftar ekstensi, dan nilai INI relevan tanpa membocorkan path atau secret.
+      - Jalankan composer check-platform-reqs, test aplikasi, dan pemeriksaan dependency sebelum environment dianggap layak.
+      - Pada Windows verifikasi build PHP 8.4.27-1 atau lebih baru; pada non-Windows verifikasi paket vendor membawa patch terkait.
+      - Catat keputusan baru dan selaraskan proposal, design, specs, serta tasks bila temuan implementasi mengubah rencana.
+      - Laporkan hasil lint/unit, integrasi, browser, staging, dan produksi secara terpisah serta nyatakan batas verifikasinya.
+  archive:
+    guidance:
+      - Sinkronkan delta spec hanya setelah implementasi terkait terverifikasi; jangan menyalin rencana menjadi main spec seolah sudah diterapkan.
+      - Task hosting, editorial tiga bahasa, keamanan runtime, staging, atau produksi tetap terbuka sampai bukti tersedia.
+      - Pertahankan catatan sumber, keputusan, hasil preflight, dan batas rollback saat mengarsipkan perubahan release.
