@@ -1,0 +1,44 @@
+{
+  "public/fonts/dm-sans-latin-400-normal.woff2": {
+    "file": "assets/dm-sans-latin-400-normal-CW0RaeGs.woff2",
+    "src": "public/fonts/dm-sans-latin-400-normal.woff2"
+  },
+  "public/fonts/dm-sans-latin-600-normal.woff2": {
+    "file": "assets/dm-sans-latin-600-normal-Aqo67rzb.woff2",
+    "src": "public/fonts/dm-sans-latin-600-normal.woff2"
+  },
+  "public/fonts/noto-naskh-arabic-arabic-400-normal.woff2": {
+    "file": "assets/noto-naskh-arabic-arabic-400-normal-U_i0HMfG.woff2",
+    "src": "public/fonts/noto-naskh-arabic-arabic-400-normal.woff2"
+  },
+  "public/fonts/playfair-display-latin-500-italic.woff2": {
+    "file": "assets/playfair-display-latin-500-italic-BFrGFGAj.woff2",
+    "src": "public/fonts/playfair-display-latin-500-italic.woff2"
+  },
+  "public/fonts/playfair-display-latin-500-normal.woff2": {
+    "file": "assets/playfair-display-latin-500-normal-DIxvyhka.woff2",
+    "src": "public/fonts/playfair-display-latin-500-normal.woff2"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-DapvQ2pD.css",
+    "name": "app",
+    "names": [
+      "app.css"
+    ],
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "assets": [
+      "assets/dm-sans-latin-400-normal-CW0RaeGs.woff2",
+      "assets/dm-sans-latin-600-normal-Aqo67rzb.woff2",
+      "assets/playfair-display-latin-500-normal-DIxvyhka.woff2",
+      "assets/playfair-display-latin-500-italic-BFrGFGAj.woff2",
+      "assets/noto-naskh-arabic-arabic-400-normal-U_i0HMfG.woff2"
+    ]
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-tdp35Mqh.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}
