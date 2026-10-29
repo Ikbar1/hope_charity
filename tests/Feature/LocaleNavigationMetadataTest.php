@@ -27,12 +27,12 @@ final class LocaleNavigationMetadataTest extends TestCase
         $response->assertSee('hreflang="x-default"', false);
     }
 
-    public function test_unavailable_profile_does_not_claim_alternate_content_or_fallback_to_indonesian(): void
+    public function test_concept_profile_has_localized_content_without_indonesian_fallback(): void
     {
         $this->get('/en/profil')
             ->assertOk()
-            ->assertSee('Verified content for this page is not available yet.')
+            ->assertSee('Growing Together,')
             ->assertDontSee('Konten terverifikasi untuk halaman ini belum tersedia.')
-            ->assertDontSee('<link rel="alternate"', false);
+            ->assertSee('<link rel="alternate"', false);
     }
 }

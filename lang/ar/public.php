@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'footer' => ['explore' => 'استكشف', 'social' => 'وسائل التواصل الاجتماعي', 'social_pending' => 'حسابات التواصل الاجتماعي الرسمية قيد الإعداد.', 'back' => 'العودة إلى الأعلى'],
     'skip_to_content' => 'انتقل إلى المحتوى الرئيسي',
     'primary_navigation' => 'التنقل الرئيسي',
     'language_navigation' => 'اختيار اللغة',

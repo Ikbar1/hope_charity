@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'footer' => ['explore' => 'Jelajahi', 'social' => 'Media sosial', 'social_pending' => 'Akun media sosial resmi sedang dipersiapkan.', 'back' => 'Kembali ke atas'],
     'skip_to_content' => 'Lewati ke konten utama',
     'primary_navigation' => 'Navigasi utama',
     'language_navigation' => 'Pilihan bahasa',

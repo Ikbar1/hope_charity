@@ -50,7 +50,10 @@ context: |
   Jangan mengarang legalitas, profil, pengurus, lokasi, kontak, angka donasi,
   capaian, laporan, testimoni, hadis, terjemahan, atau status program. Konten
   ilustratif dalam mockup tidak boleh diperlakukan sebagai fakta yayasan atau
-  dipublikasikan tanpa verifikasi.
+  dipublikasikan sebagai informasi resmi tanpa verifikasi. Keputusan pengguna
+  29 Oktober 2026 mengizinkan materi mockup sebagai konsep review berlabel
+  pada local/testing/preview dalam ID/EN/AR. Pertahankan tampilan mockup,
+  gunakan logo dan delapan kategori resmi, hapus donasi, lengkapi Program/Kontak.
 
   Local dan preview wajib noindex. Hosting, domain, deployment, indexing
   produksi, formulir aktif, email, WhatsApp, dan integrasi eksternal belum

@@ -11,5 +11,7 @@ final readonly class InstitutionalPage
         public ?string $title,
         public ?string $body,
         public ?string $provenance,
+        public array $blocks = [],
+        public string $editorialStatus = 'verified',
     ) {}
 }

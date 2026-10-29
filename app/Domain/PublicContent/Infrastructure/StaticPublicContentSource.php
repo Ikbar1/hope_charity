@@ -39,7 +39,8 @@ final class StaticPublicContentSource implements PublicContentSource
     public function institutionalPage(string $pageKey, string $locale): InstitutionalPage
     {
         $this->assertSupportedLocale($locale);
-        $availability = $pageKey === 'program'
+        $blocks = ConceptContent::read($locale);
+        $availability = $pageKey === 'program' || $blocks !== []
             ? ContentAvailability::Available
             : ContentAvailability::Unavailable;
 
@@ -49,7 +50,9 @@ final class StaticPublicContentSource implements PublicContentSource
             availability: $availability,
             title: null,
             body: null,
-            provenance: $availability === ContentAvailability::Available ? self::PROVENANCE : null,
+            provenance: $blocks !== [] ? ConceptContent::SOURCE : ($availability === ContentAvailability::Available ? self::PROVENANCE : null),
+            blocks: $blocks,
+            editorialStatus: $blocks !== [] ? 'concept' : 'verified',
         );
     }
 
@@ -60,7 +63,7 @@ final class StaticPublicContentSource implements PublicContentSource
         return new LocaleContentStatus(
             pageKey: $pageKey,
             locale: $locale,
-            availability: $pageKey === 'program' ? ContentAvailability::Available : ContentAvailability::Unavailable,
+            availability: $this->institutionalPage($pageKey, $locale)->availability,
         );
     }
 

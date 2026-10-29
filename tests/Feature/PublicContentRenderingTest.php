@@ -28,9 +28,9 @@ final class PublicContentRenderingTest extends TestCase
         $html = $response->getContent();
 
         $response->assertSeeInOrder(self::PROGRAMS[$locale]);
-        self::assertSame(8, substr_count($html, 'class="program-list__item"'));
+        self::assertSame(8, substr_count($html, 'data-program-key='));
         self::assertStringContainsString("dir=\"{$direction}\"", $html);
-        self::assertStringNotContainsString('<img', $html);
+        self::assertStringContainsString('demo-ribbon', $html);
         self::assertStringNotContainsString('mockups/', $html);
         self::assertStringContainsString($emptyCopy, $html);
     }

@@ -2,11 +2,21 @@
 
 Fondasi Laravel 13 untuk website publik multilingual Yayasan Hope Charity Indonesia. Fase onboarding ini menyediakan Beranda, Profil, Program, dan Kontak dalam Bahasa Indonesia, Inggris, serta Arab (RTL), dengan sumber konten statis yang dapat diganti CMS kelak.
 
+## Konsep review
+
+Website mengikuti mockup pada empat halaman ID/EN/AR. Materi ilustratif
+berstatus konsep hanya tersedia pada local/testing/preview. Donasi dihapus.
+Deployment Rumahweb mengikuti change release setelah review lokal.
+
+Implementasi frontend, logo transparan dan footer telah diverifikasi lokal.
+Arsip: `openspec/changes/archive/2026-10-29-build-multilingual-mockup-pages/`.
+Bukti review: `docs/verification/mockup-pages/review.md`.
+
 ## Batas fase onboarding
 
 - Konten terverifikasi hanya nama resmi dan delapan kategori program.
 - Belum ada CMS, database konten, akun admin, formulir aktif, donasi, email, WhatsApp, deployment, atau indexing produksi.
-- Mockup di `mockups/` adalah referensi visual; isi dan medianya tidak dipublikasikan.
+- Mockup di `mockups/` menjadi referensi visual; salinan isi/media tampil sebagai konsep berlabel pada local/testing/preview, bukan informasi resmi.
 - Runtime hosting/web SAPI belum diverifikasi.
 
 ## Runtime lokal Windows

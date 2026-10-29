@@ -45,16 +45,16 @@ Pemilih bahasa SHALL menautkan setiap locale ke halaman ekuivalen, bukan selalu 
 - **THEN** tautan locale dan navigasi halaman tetap dapat digunakan sebagai tautan HTML biasa
 
 ### Requirement: Konten locale yang belum tersedia ditandai eksplisit
-Sistem MUST menampilkan status lokal bahwa konten sedang dipersiapkan ketika isi halaman pada locale aktif belum diverifikasi, tanpa menyisipkan isi locale lain.
+Sistem MUST merender versi verified atau concept yang tersedia pada locale aktif dengan statusnya; bila keduanya tidak tersedia, sistem MUST menampilkan empty state terlokalisasi tanpa menyisipkan bahasa lain.
 
 #### Scenario: Isi locale tersedia
-- **WHEN** sumber konten mempunyai versi terverifikasi untuk locale aktif
-- **THEN** sistem merender versi locale tersebut
+- **WHEN** sumber mempunyai versi verified atau concept untuk locale aktif
+- **THEN** sistem merender versi tersebut dan menampilkan penanda konsep bila statusnya concept
 
 #### Scenario: Isi locale belum tersedia
-- **WHEN** sumber konten tidak mempunyai versi terverifikasi untuk locale aktif
-- **THEN** halaman menampilkan empty state terlokalisasi dan tetap mempertahankan navigasi
-- **AND** teks Indonesia, Inggris, atau Arab dari locale lain tidak dipakai sebagai fallback terselubung
+- **WHEN** sumber tidak mempunyai versi verified maupun concept untuk locale aktif
+- **THEN** halaman menampilkan empty state terlokalisasi dan mempertahankan navigasi
+- **AND** isi locale lain tidak dipakai sebagai fallback terselubung
 
 ### Requirement: Metadata locale konsisten dengan halaman
 Setiap halaman SHALL menghasilkan canonical dan alternatif bahasa yang menunjuk route ekuivalen serta tidak mengklaim konten yang belum tersedia sebagai terjemahan lengkap.
@@ -77,3 +77,15 @@ Shell dasar MUST mempunyai landmark semantik, skip link, fokus keyboard yang ter
 #### Scenario: Pengunjung memilih reduced motion
 - **WHEN** browser mengaktifkan `prefers-reduced-motion`
 - **THEN** shell tidak menjalankan motion non-esensial dan seluruh konten tetap tersedia
+
+### Requirement: Pengalaman konsep lengkap pada tiga bahasa
+Empat halaman SHALL menyediakan narasi, label, deskripsi kategori, alt ilustrasi, status review dan kontrol demonstratif dalam ID/EN/AR dengan makna setara serta nama kategori sesuai sumber pengguna.
+
+#### Scenario: Bahasa Inggris atau Arab dibaca
+- **WHEN** pengunjung mengganti bahasa pada salah satu dari empat halaman
+- **THEN** seluruh isi yang terlihat tersedia pada bahasa tujuan tanpa key mentah atau teks antarmuka Indonesia yang tertinggal
+- **AND** nama resmi/logo dipertahankan dan terjemahan konsep tidak diklaim sebagai naskah resmi yayasan
+
+#### Scenario: Konten Arab ditampilkan
+- **WHEN** halaman Arab dirender pada desktop dan mobile
+- **THEN** tata letak, navigasi dan formulir mengikuti RTL, angka/URL memakai arah yang benar serta logo dan foto tidak dicerminkan

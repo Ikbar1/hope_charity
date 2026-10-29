@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'footer' => ['explore' => 'Explore', 'social' => 'Social media', 'social_pending' => 'Official social media accounts are being prepared.', 'back' => 'Back to top'],
     'skip_to_content' => 'Skip to main content',
     'primary_navigation' => 'Primary navigation',
     'language_navigation' => 'Language selection',

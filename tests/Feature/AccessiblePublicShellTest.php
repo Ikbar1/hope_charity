@@ -15,9 +15,9 @@ final class AccessiblePublicShellTest extends TestCase
             ->assertSee("<html lang=\"{$locale}\" dir=\"{$direction}\">", false)
             ->assertSee('class="skip-link" href="#main-content"', false)
             ->assertSee('<header class="site-header">', false)
-            ->assertSee('<nav class="primary-nav"', false)
-            ->assertSee('<main class="page-shell" id="main-content" tabindex="-1">', false)
-            ->assertSee('<footer class="site-footer">', false)
+            ->assertSee('<nav id="primary-nav" class="primary-nav"', false)
+            ->assertSee('<main id="main-content" tabindex="-1">', false)
+            ->assertSee('<footer>', false)
             ->assertSee('aria-current="page"', false);
     }
 
@@ -26,9 +26,9 @@ final class AccessiblePublicShellTest extends TestCase
         $css = file_get_contents(resource_path('css/app.css'));
 
         self::assertStringContainsString(':focus-visible', $css);
-        self::assertStringContainsString('@media (max-width: 44rem)', $css);
-        self::assertStringContainsString('@media (prefers-reduced-motion: reduce)', $css);
-        self::assertStringContainsString('min-width: 20rem', $css);
+        self::assertStringContainsString('@media(max-width:760px)', $css);
+        self::assertStringContainsString('@media(prefers-reduced-motion:reduce)', $css);
+        self::assertStringContainsString('min-width:320px', $css);
     }
 
     public static function localePageProvider(): array
