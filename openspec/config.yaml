@@ -54,6 +54,11 @@ context: |
   29 Oktober 2026 mengizinkan materi mockup sebagai konsep review berlabel
   pada local/testing/preview dalam ID/EN/AR. Pertahankan tampilan mockup,
   gunakan logo dan delapan kategori resmi, hapus donasi, lengkapi Program/Kontak.
+  Bahan profil pengguna 6 November 2026 menambahkan profil, visi-misi, lima nilai,
+  lima bidang kegiatan dan kontak resmi yang dapat
+  diadaptasi secara editorial ke ID/EN/AR. Bagian tanpa padanan tetap placeholder.
+  Sumber PDF privat dipertahankan di .local; provenance per field membedakan
+  adaptasi bahan yayasan dengan konten konsep yang masih dipertahankan.
 
   Local dan preview wajib noindex. Hosting, domain, deployment, indexing
   produksi, formulir aktif, email, WhatsApp, dan integrasi eksternal belum

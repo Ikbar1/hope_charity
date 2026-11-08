@@ -88,3 +88,18 @@ html[dir=rtl] .footer-main h2{font-family:'Noto Naskh Arabic',serif}
 .footer-bottom a{display:inline-flex;align-items:center;gap:12px;white-space:nowrap}
 @media(max-width:760px){.footer-main{grid-template-columns:1fr 1fr;gap:30px 20px;padding-block:36px}.footer-identity{grid-column:1/-1;display:flex;align-items:center;gap:20px}.footer-logo{width:100px;height:100px;flex-shrink:0}.footer-identity p{margin:0;max-width:20ch}.footer-main h2{font-size:22px;margin-block:0 16px}.footer-bottom{align-items:flex-start;flex-direction:column}.social-icons{gap:8px}.social-icon{width:42px;height:42px}}
 @media(max-width:400px){.footer-main{grid-template-columns:1fr}.footer-identity{grid-column:auto}.footer-social p{max-width:none}}
+
+/* Profil lembaga: rincian sumber resmi dengan ritme visual mockup. */
+.mission-list{margin:0;padding-inline-start:20px}.mission-list li{padding-block:10px}.mission-list h3{font-size:19px;font-weight:500;margin:0 0 8px}.mission-list p{font-size:14px;color:var(--muted);margin:0;line-height:1.8}
+.profile-vision-photo{position:relative}.profile-vision-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.foundation-details,.foundation-boards,.foundation-focus,.foundation-partners{padding:75px 9%}
+.foundation-details,.foundation-focus{background:var(--cream2)}
+.foundation-details h2,.section-heading h2{font:500 clamp(30px,3.3vw,48px)/1.25 'Playfair Display',Georgia,serif;margin:0 0 24px}
+html[dir=rtl] .foundation-details h2,html[dir=rtl] .section-heading h2{font-family:'Noto Naskh Arabic',serif}
+.section-heading{max-width:780px;margin-block-end:36px}.section-heading p,.accountability-note{color:var(--muted);font-size:15px;line-height:1.9}
+.legal-list{margin:32px 0 0}.legal-list>div{display:grid;grid-template-columns:minmax(150px,1fr) 2fr;gap:20px;border-block-start:1px solid #b6a68e;padding-block:20px}.legal-list dt{font-weight:600}.legal-list dd{margin:0;line-height:1.8;overflow-wrap:anywhere}
+.boards-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.boards-grid article,.partners-grid article{padding:30px;border:1px solid #dbcfbc;background:#fffaf2;border-radius:18px}
+.boards-grid h3,.focus-list h3,.partners-grid h3{font-size:24px;font-weight:500;margin:0 0 22px}.boards-grid dl{margin:0}.boards-grid dl>div+div{margin-block-start:22px}.boards-grid dt{font-size:12px;color:#765326;margin-bottom:8px}.boards-grid dd{font-size:17px;line-height:1.6;margin:0;overflow-wrap:anywhere}.accountability-note{max-width:880px;margin:30px 0 0;border-inline-start:2px solid var(--gold);padding-inline-start:20px}
+.focus-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px}.focus-list article{border-block-start:1px solid #b6a68e;padding-block:26px}.focus-list h3{margin-bottom:14px}.focus-list p,.partners-grid p{font-size:14px;line-height:1.9;color:var(--muted);margin:0}
+.partners-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.contact-details p{overflow-wrap:anywhere}
+@media(max-width:760px){.foundation-details,.foundation-boards,.foundation-focus,.foundation-partners{padding:55px 7%}.boards-grid,.focus-list,.partners-grid{grid-template-columns:1fr}.legal-list>div{grid-template-columns:1fr;gap:8px}.profile-vision-photo{min-height:320px}.boards-grid article,.partners-grid article{padding:26px}.mission-list h3{font-size:20px}}

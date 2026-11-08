@@ -27,6 +27,12 @@ const assert = require('node:assert/strict');
             assert.equal(await page.locator('meta[name=robots]').getAttribute('content'), 'noindex, nofollow');
             assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
             assert.equal(await page.locator('.brand img').evaluate(i => i.complete && i.naturalWidth > 0), true);
+            if (process.env.HOPE_REVIEW_DIR) {
+                fs.mkdirSync(process.env.HOPE_REVIEW_DIR, { recursive: true });
+                await page.locator('footer').scrollIntoViewIfNeeded();
+                await page.evaluate(() => scrollTo(0, 0));
+                await page.screenshot({ path: path.join(process.env.HOPE_REVIEW_DIR, (locale || 'id/').replace('/', '') + '-' + (target || 'home/').replace('/', '') + '-' + width + '.jpg'), fullPage: true });
+            }
             for (const url of await page.locator('[href],[src]').evaluateAll(nodes => nodes.map(n => n.href || n.src))) {
                 assert.ok(url.startsWith('https://ikbar1.github.io/hope_charity/'), url);
                 assert.ok(fs.existsSync(files(url)), url);

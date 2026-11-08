@@ -1,0 +1,160 @@
+{
+    "ribbon": "Website preview · Foundation profile updated; some images and figures remain illustrative",
+    "hero": [
+        "Social, humanitarian, and religious work",
+        "Spreading Hope,",
+        "Sharing Kindness.",
+        "Based in South Jakarta, Hope Charity Indonesia connects compassion with community needs through social support, humanitarian work, education, and religious facilities."
+    ],
+    "profile": [
+        "Meet Hope Charity Indonesia",
+        "Rooted in Compassion,",
+        "Growing through Kindness.",
+        "Hope Charity Indonesia brings people together for social, humanitarian, and religious initiatives—helping compassion reach more people and create lasting benefits."
+    ],
+    "story": [
+        "About us",
+        "Connecting Compassion,",
+        "Creating Lasting Benefit.",
+        "Based in South Jakarta, Yayasan Hope Charity Indonesia works in social, humanitarian, and religious fields. Its scope includes education, basic community needs, and places of worship.",
+        "We bring together supporters, partners, volunteers, and communities to develop purposeful programs. Each step is guided by the foundation’s objectives, needs on the ground, and organizational readiness."
+    ],
+    "visionLabel": "Our direction",
+    "visionTitle": "Vision & Mission",
+    "vision": [
+        "Vision",
+        "To be a trustworthy, professional, and reliable social, humanitarian, and religious foundation that creates lasting benefits and improves community welfare."
+    ],
+    "mission": [
+        "Mission",
+        "Five commitments guide the work of Hope Charity Indonesia."
+    ],
+    "missions": [
+        [
+            "Social and humanitarian programs",
+            "Develop responsive, relevant, and measurable programs that address basic community needs."
+        ],
+        [
+            "Education and personal development",
+            "Improve access to learning and help people develop their potential through structured educational activities."
+        ],
+        [
+            "Places of worship and religious guidance",
+            "Support worship facilities, religious guidance, and inclusive community outreach."
+        ],
+        [
+            "Clean water and sanitation",
+            "Work towards access to clean water, wells, suitable sanitation, and assistance with basic needs."
+        ],
+        [
+            "Stronger partnerships",
+            "Collaborate with individuals, communities, businesses, and institutions that share a commitment to care."
+        ]
+    ],
+    "valuesTitle": "The Values Behind Every Step.",
+    "values": [
+        [
+            "Trust",
+            "Honor the trust placed in us and use each contribution for its agreed purpose."
+        ],
+        [
+            "Compassion",
+            "Respond with empathy, respect human dignity, and understand community needs."
+        ],
+        [
+            "Professionalism",
+            "Plan, carry out, and evaluate activities in an orderly and responsible way."
+        ],
+        [
+            "Transparency",
+            "Promote clear activity reporting and accountability in the use of resources."
+        ],
+        [
+            "Collaboration",
+            "Build lasting partnerships to extend the reach of positive change."
+        ]
+    ],
+    "program": [
+        "Our scope of work",
+        "Together, Responding",
+        "to Community Needs.",
+        "From places of worship to humanitarian assistance, our programs are designed around community needs. Implementation follows the foundation’s priorities and readiness."
+    ],
+    "feature": [
+        "Program priority",
+        "Places of Worship,",
+        "Shared Hope.",
+        "Mosque and prayer-room construction and renovation are the main priority ready to be undertaken. The wider scope also includes Islamic boarding schools, madrasahs, and religious guidance."
+    ],
+    "about": "Spreading hope and sharing kindness through purposeful care.",
+    "contact": [
+        "Partnerships and institutional relations",
+        "Let Us Connect,",
+        "Create Good Together.",
+        "We welcome collaboration with individuals, communities, institutions, and businesses that want to make a positive contribution together."
+    ],
+    "contactLabels": [
+        "Secretariat",
+        "Official email",
+        "Phone / WhatsApp"
+    ],
+    "contactDetails": [
+        "Jl. Gintung No. 6, Tanjung Barat, Jagakarsa, Jakarta Selatan, DKI Jakarta 12530",
+        "ysnhopecharity@gmail.com",
+        "+62 851-5166-3016"
+    ],
+    "concept": "Profile adapted from foundation materials. Illustrative images and sample figures remain placeholders for review.",
+    "focusTitle": "Five Fields, One Shared Purpose",
+    "focusIntro": "These fields describe the foundation’s scope of activities. Their inclusion does not mean all programs are already operating; implementation follows organizational priorities and readiness.",
+    "focusAreas": [
+        [
+            "Religious activities & places of worship",
+            "Construction and renovation of mosques, prayer rooms, Islamic boarding schools, and madrasahs, alongside religious education and community guidance."
+        ],
+        [
+            "Education & capacity building",
+            "Formal and nonformal education, skills courses, social research, academic forums, talent and arts development, and leadership training."
+        ],
+        [
+            "Clean water & sanitation",
+            "Clean-water facilities, well drilling in drought-prone areas, and public sanitation, washing, and toilet facilities."
+        ],
+        [
+            "Social care & empowerment",
+            "Basic necessities, care and assistance for orphaned children, support for older people in need, and micro-scale economic empowerment."
+        ],
+        [
+            "Humanitarian aid & disaster response",
+            "Emergency supplies for disaster-affected people, assistance for displaced communities, and humanitarian support during social emergencies."
+        ]
+    ],
+    "partnersTitle": "Many Ways to Get Involved",
+    "partnersIntro": "We welcome partners who share our commitment to care and want to contribute in ways that meet program needs.",
+    "partnerships": [
+        [
+            "Program support",
+            "Non-binding grants and contributions to support programs."
+        ],
+        [
+            "Joint implementation",
+            "Working together on social, humanitarian, educational, and worship-facility projects."
+        ],
+        [
+            "Volunteers & resources",
+            "Professional skills, technical advice, equipment, and operational facilities."
+        ],
+        [
+            "CSR partnerships",
+            "Corporate social responsibility partnerships to extend the benefits of programs."
+        ]
+    ],
+    "programDescriptions": {
+        "0": "Supporting mosque and prayer-room construction and renovation as the foundation’s main priority.",
+        "1": "Supporting worship, education, and sanitation facilities that communities need.",
+        "2": "Working towards access to clean water through well drilling, including in drought-prone areas.",
+        "3": "Supporting care and assistance for orphaned children, with attention to their needs.",
+        "4": "Providing assistance with basic needs and social support in line with program priorities.",
+        "6": "Supporting people in need through food packages, care for older people, and micro-scale economic empowerment.",
+        "7": "Providing emergency supplies, supporting displaced people, and assisting communities affected by disasters or social emergencies."
+    }
+}

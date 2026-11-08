@@ -13,6 +13,9 @@ berstatus konsep hanya tersedia pada local/testing/preview. Donasi dihapus.
 Deployment Rumahweb mengikuti change release setelah review lokal.
 
 Implementasi frontend, logo transparan dan footer telah diverifikasi lokal.
+Profil, visi–misi, nilai, bidang kegiatan, dan kontak telah disesuaikan
+dari PDF bahan yayasan pada 6 November 2026. Bagian yang belum memiliki padanan
+tetap placeholder. Pemetaan: `docs/frontend/profile-content-2026-11-06.md`.
 Arsip: `openspec/changes/archive/2026-10-29-build-multilingual-mockup-pages/`.
 Bukti review: `docs/verification/mockup-pages/review.md`.
 

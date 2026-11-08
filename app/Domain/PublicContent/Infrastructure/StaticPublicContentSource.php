@@ -40,6 +40,21 @@ final class StaticPublicContentSource implements PublicContentSource
     {
         $this->assertSupportedLocale($locale);
         $blocks = ConceptContent::read($locale);
+        $blockSources = [];
+        if ($blocks !== []) {
+            foreach ($blocks as $key => $value) {
+                $blockSources[$key] = ['status' => 'concept', 'source' => ConceptContent::SOURCE];
+            }
+            $profile = FoundationProfile::read($locale);
+            $blocks = array_replace($blocks, $profile);
+            foreach ($profile as $key => $value) {
+                $blockSources[$key] = ['status' => 'source-adapted', 'source' => FoundationProfile::SOURCE, 'locale' => $locale];
+            }
+            foreach ($profile['programDescriptions'] ?? [] as $index => $description) {
+                $blocks['descriptions'][$index] = $description;
+                $blockSources['descriptions.'.$index] = ['status' => 'source-adapted', 'source' => FoundationProfile::SOURCE];
+            }
+        }
         $availability = $pageKey === 'program' || $blocks !== []
             ? ContentAvailability::Available
             : ContentAvailability::Unavailable;
@@ -53,6 +68,7 @@ final class StaticPublicContentSource implements PublicContentSource
             provenance: $blocks !== [] ? ConceptContent::SOURCE : ($availability === ContentAvailability::Available ? self::PROVENANCE : null),
             blocks: $blocks,
             editorialStatus: $blocks !== [] ? 'concept' : 'verified',
+            blockSources: $blockSources,
         );
     }
 

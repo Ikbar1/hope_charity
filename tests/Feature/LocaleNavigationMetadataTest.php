@@ -31,7 +31,7 @@ final class LocaleNavigationMetadataTest extends TestCase
     {
         $this->get('/en/profil')
             ->assertOk()
-            ->assertSee('Growing Together,')
+            ->assertSee('Rooted in Compassion,')
             ->assertDontSee('Konten terverifikasi untuk halaman ini belum tersedia.')
             ->assertSee('<link rel="alternate"', false);
     }
